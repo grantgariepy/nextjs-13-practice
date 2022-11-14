@@ -4,11 +4,12 @@ import TodosList from './(user)/todos/TodosList'
 function Home() {
   return (
     <div>
-
+      <p className='text-xl text-white'>Homepage</p>
+{/*
       <Suspense fallback={<p>Loading the Todos</p>}>
         <h1>Loading Todos</h1>
         <div className='flex space-x-2'>
-          {/* @ts-ignore */}
+           @ts-ignore 
           <TodosList/>
         </div>
       </Suspense>
@@ -16,10 +17,10 @@ function Home() {
       <Suspense fallback={<p>Loading shopping cart</p>}>
         <h1>Loading Shopping Cart</h1>
         <div className='flex space-x-2'>
-          {/* @ts-ignore */}
+          
           <TodosList />
         </div>
-      </Suspense>
+      </Suspense>*/}
     </div>
 
   )

@@ -23,7 +23,7 @@ async function TodoPage({params: { id } }:PageProps) {
   if (!todo.id) return notFound();
 
   return (
-    <div className='p-10 bg-yellow-200 border-2 m-2 shadow-lg'>
+    <div className='p-10 bg-yellow-200 border-2 m-2 shadow-lg text-black' >
       <p>
         #{todo.id}: {todo.title}
       </p>

@@ -1,4 +1,4 @@
-import TodosList from "./TodosList"
+import Crypto from "./Crypto"
 
 export default function RootLayout({
   children,
@@ -6,10 +6,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <main className="flex text-white">
+    <main className="flex">
       <div >
         {/* @ts-ignore */}
-        <TodosList />
+        <Crypto />
       </div>
       <div className="flex-1">{children}</div>
     </main>

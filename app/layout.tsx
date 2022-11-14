@@ -7,11 +7,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
+    <html className='dark'>
       <head>
         <title>Grant's Website</title>
       </head>
-      <body>
+      <body className='dark:bg-slate-700'>
         <Header />
         {children}
         </body>
