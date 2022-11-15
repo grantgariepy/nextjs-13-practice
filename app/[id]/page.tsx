@@ -45,11 +45,11 @@ async function CoinPage({params: { id } }:PageProps) {
 
   if (!id) return notFound();
   return (
-    <div className='p-10 bg-yellow-200 border-2 m-2 shadow-lg'>
+    <div className='p-10 bg-warning border-2 m-2 shadow-lg'>
       <div className='flex justify-center'>
         <img src={coin.image.large} alt="" />
       </div>
-      <p className='text-4xl'>
+      <p className='text-4xl font-bold'>
         {coin.id}: {coin.name}
       </p>
       
