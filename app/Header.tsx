@@ -3,14 +3,22 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className='p-5 bg-slate-800'>
-        <Link href="/" className='px-2 py-1 m-3 bg-white text-slate-800 rounded-lg'>Home</Link>
-
-        <Link href="/todos" className='px-2 py-1 m-3 bg-white text-slate-800 rounded-lg'>Todos</Link>
-        
-        <Link href="/search" className='px-2 py-1 m-3 bg-white text-slate-800 rounded-lg'>Search</Link>
-        <Link href="/crypto" className='px-2 py-1 m-3 bg-white text-slate-800 rounded-lg'>Crypto</Link>
-      </header>
+    <>
+      <div className="navbar bg-neutral text-neutral-content">
+        <div className='flex-1'>
+          
+          <p className="btn btn-ghost normal-case text-xl">
+            <Link href="/">Crypto Charts</Link>  
+          </p>
+        </div>
+        <div className='flex-none'>
+          <p className="btn btn-ghost normal-case text-xl">
+            <Link href="/about">About</Link>  
+          </p>
+        </div>
+      </div>
+      
+    </>
   )
 }
 

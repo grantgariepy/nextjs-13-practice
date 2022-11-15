@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import Crypto from './Crypto'
 import Header from './Header'
 
 export default function RootLayout({
@@ -7,14 +8,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className='dark'>
+    <html >
       <head>
         <title>Grant's Website</title>
       </head>
-      <body className='dark:bg-slate-700'>
+      <body>
         <Header />
-        {children}
-        </body>
+        <main className='flex'>
+          <div>
+            {/* @ts-ignore */}
+            <Crypto />
+          </div>
+          <div className="flex-1">{children}</div>
+        </main>
+      </body>
     </html>
   )
 }

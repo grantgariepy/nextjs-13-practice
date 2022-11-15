@@ -1,10 +1,9 @@
 import React, { Suspense } from 'react'
-import TodosList from './(user)/todos/TodosList'
 
 function Home() {
   return (
     <div>
-      <p className='text-xl text-white'>Homepage</p>
+      <p className='text-lg'>Homepage</p>
 {/*
       <Suspense fallback={<p>Loading the Todos</p>}>
         <h1>Loading Todos</h1>

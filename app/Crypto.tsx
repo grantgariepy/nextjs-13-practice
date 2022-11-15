@@ -1,5 +1,5 @@
 import React from 'react'
-import { Coins } from '../../../typings';
+import { Coins } from '../typings';
 import Link from 'next/link';
 
 const fetchCoins = async () => {
@@ -16,8 +16,8 @@ async function Crypto() {
   return (
     <>
       {coins.map((coin) => (
-        <p key={coin.id} className="text-white">
-          <Link href={`/crypto/${coin.id}`}> Coin: {coin.id} - {coin.name}</Link>
+        <p key={coin.id} className="">
+          <Link href={`/${coin.id}`}> Coin: {coin.id} - {coin.name}</Link>
         </p>
       ))}
     </>

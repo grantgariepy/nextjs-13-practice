@@ -1,5 +1,5 @@
 import React from 'react'
-import { Coin } from '../../../../typings'
+import { Coin } from '../../typings'
 import { notFound } from "next/navigation" 
 
 export const dynamicParams = true;
