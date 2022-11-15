@@ -3,23 +3,20 @@ import React, { Suspense } from 'react'
 function Home() {
   return (
     <div>
-      <p className='text-lg'>Homepage</p>
-{/*
-      <Suspense fallback={<p>Loading the Todos</p>}>
-        <h1>Loading Todos</h1>
-        <div className='flex space-x-2'>
-           @ts-ignore 
-          <TodosList/>
+      {/* <video autoPlay muted loop preload="auto">
+        <source  src="/bitcoin.mp4" type="video/mp4" />
+      </video> */}
+      <div className="hero min-h-screen">
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <p className="mb-5">Your one stop shop for all your Cyrptocurrency information. Click the button below to begin your journey.</p>
+            <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Search for Coin</label>
+          </div>
         </div>
-      </Suspense>
+      </div>
 
-      <Suspense fallback={<p>Loading shopping cart</p>}>
-        <h1>Loading Shopping Cart</h1>
-        <div className='flex space-x-2'>
-          
-          <TodosList />
-        </div>
-      </Suspense>*/}
     </div>
 
   )

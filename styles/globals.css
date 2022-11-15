@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  border-radius: 0;
+}
+
+.btn:hover{
+  box-shadow: 5px 5px black;
+}
