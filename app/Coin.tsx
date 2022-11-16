@@ -10,8 +10,8 @@ const handleClick = () =>{
 
 const Coin = ({name, id}:{name: string, id: string}) => {
   return (
-    <li key={id} onClick={handleClick} >
-      <Link href={`/${id}`}>{name}</Link>
+    <li key={id}  >
+      <Link onClick={handleClick} href={`/${id}`}>{name}</Link>
     </li>
   )
 }
