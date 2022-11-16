@@ -3,10 +3,9 @@
 import Link from 'next/link'
 import React from 'react'
 
-let isDrawerOpen = false
-
-function handleClick() {
-    isDrawerOpen = !isDrawerOpen
+let checked = false;
+const handleClick = () =>{
+  checked = !checked;
 }
 
 const Coin = ({name, id}:{name: string, id: string}) => {
