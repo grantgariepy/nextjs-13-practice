@@ -16,9 +16,9 @@ async function Crypto() {
   return (
     <>
       {coins.map((coin) => (
-        <p key={coin.id} className="">
-          <Link href={`/${coin.id}`}> {coin.name}</Link>
-        </p>
+        <li key={coin.id} >
+          <Link href={`/${coin.id}`}>{coin.name}</Link>
+        </li>
       ))}
     </>
   )

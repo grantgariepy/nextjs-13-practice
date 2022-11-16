@@ -11,6 +11,7 @@ export default function RootLayout({
     <html >
       <head>
         <title>Grant's Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </head>
       <body>
         <Header />
@@ -20,11 +21,11 @@ export default function RootLayout({
             <div className="drawer-content">
               {/* <!-- Page content here --> */}
               {/* <label htmlFor="my-drawer" className="btn btn-primary drawer-button">Open drawer</label> */}
-              <div className="flex-1">{children}</div>
+              <div className="">{children}</div>
             </div> 
             <div className="drawer-side">
               <label htmlFor="my-drawer" className="drawer-overlay"></label>
-              <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+              <ul className="menu bg-base-100 w-56 p-2">
                 {/* <!-- Sidebar content here --> */}
                 {/* @ts-ignore */}
                 <Crypto />

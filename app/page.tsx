@@ -8,7 +8,7 @@ function Home() {
       </video> */}
       <div className="hero min-h-screen">
         <div className="hero-overlay bg-base-200"></div>
-        <div className="hero-content text-center text-black">
+        <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
             <p className="mb-5">Your one stop shop for all your Cyrptocurrency information. Click the button below to begin your journey.</p>
@@ -16,6 +16,7 @@ function Home() {
           </div>
         </div>
       </div>
+      
 
     </div>
 
