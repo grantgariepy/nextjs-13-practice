@@ -22,11 +22,11 @@ async function Crypto() {
         
         
 
-          // <Coin id={coin.id} name={coin.name} />
+          <Coin id={coin.id} name={coin.name} />
         
-        <li key={coin.id} >
-          <Link href={`/${coin.id}`}>{coin.name}</Link>
-        </li>
+//         <li key={coin.id} >
+//           <Link href={`/${coin.id}`}>{coin.name}</Link>
+//         </li>
       ))}
     </>
         
