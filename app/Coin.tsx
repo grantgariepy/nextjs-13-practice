@@ -11,10 +11,12 @@ const handleClick = () =>{
 
 const Coin = ({name, id}:{name: string, id: string}) => {
   return (
-    <input id="my-drawer" type="checkbox" className="drawer-toggle"/>
-    <li key={id}  >
-      <Link onClick={handleClick} href={`/${id}`}>{name}</Link>
-    </li>
+    <>
+      <input id="my-drawer" type="checkbox" className="drawer-toggle"/>
+      <li key={id}  >
+        <Link onClick={handleClick} href={`/${id}`}>{name}</Link>
+      </li>
+    </>
   )
 }
 
