@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const isDrawerOpen = false
+let isDrawerOpen = false
 
 function handleClick() {
     isDrawerOpen = !isDrawerOpen
