@@ -3,9 +3,10 @@
 import Link from 'next/link'
 import React from 'react'
 
-let checked = false;
-const handleClick = () =>{
-  checked = !checked;
+let checked = 'checked';
+
+function handleClick() {
+    (checked == 'checked') ? checked = '': checked = 'checked';
 }
 
 const Coin = ({name, id}:{name: string, id: string}) => {
