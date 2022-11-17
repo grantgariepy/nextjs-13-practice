@@ -4,7 +4,7 @@ import React from 'react'
 function Header() {
   return (
     <>
-      <div className='sticky top-0 z-50'>
+      {/* <div className='sticky top-0 z-50'> */}
 
       <div className="navbar bg-neutral text-neutral-content" >
         <div className='flex-1'>
@@ -22,7 +22,7 @@ function Header() {
         </div>
       </div>
       
-      </div>
+      {/* </div> */}
     </>
   )
 }

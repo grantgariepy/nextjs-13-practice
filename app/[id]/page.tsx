@@ -37,17 +37,17 @@ async function CoinPage({params: { id} }:PageProps) {
           >
           </p>
         </div> */}
-          <div className='p-10 bg-info border-2 m-2 shadow-lg max-w-sm'>
-            <p className='text-2xl font-bold'>Rank</p>
-            <p className='text-6xl font-bold'>{coin.market_data.market_cap_rank}</p>
-          </div>
-          <div className='p-10 bg-error border-2 m-2 shadow-lg max-w-sm'>
+          <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-sm'>
             <p className='text-2xl font-bold'>Current Price</p>
             <p className='text-6xl font-bold'>${coin.market_data.current_price.usd}</p>
           </div>
-          <div className='p-10 bg-success border-2 m-2 shadow-lg max-w-sm'>
+          <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-sm'>
             <p className='text-2xl font-bold'>All Time High</p>
             <p className='text-6xl font-bold'>${coin.market_data.ath.usd}</p>
+          </div>
+          <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-xs'>
+            <p className='text-2xl font-bold'>Rank</p>
+            <p className='text-6xl font-bold'>{coin.market_data.market_cap_rank}</p>
           </div>
         </div>
     </>
