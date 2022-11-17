@@ -1,63 +1,56 @@
 import React from 'react'
 import { Coin } from '../../typings'
 import { notFound } from "next/navigation" 
+import Description from './Description';
 
 export const dynamicParams = true;
 
 type PageProps = {
   params: {
     id: string;
-    symbol: string;
-    name: string;
-    image: string;
-    current_price: number;
-    market_cap: number;
-    fully_diluted_valuation: number;
-    total_volume: number;
-    high_24h: number;
-    low_24h: number;
-    price_change_24h: number;
-    price_change_percentage_24: number;
-    circulation_supply: number;
-    total_supply: number;
-    ath: number;
-    ath_change_percentage: number;
-    ath_date: string;
-    atl: number;
-    atl_change_percentage: number;
-    atl_date: string;
-    roi: null;
-    last_updated: string;
-    price_change_percentage_1y_in_currency: number;
-    
   }
 }
 
 const fetchCoin = async (id: string) => {
-  const res = await fetch(`https://api.coingecko.com/api/v3/coins/${id}?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false`, 
+  const res = await fetch(`https://api.coingecko.com/api/v3/coins/${id}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`, 
     { next: { revalidate: 60 } })
   const coin = await res.json();
   return coin;
 }
 
-async function CoinPage({params: { id } }:PageProps) {
+async function CoinPage({params: { id} }:PageProps) {
   const coin: Coin = await fetchCoin(id)
 
   if (!id) return notFound();
   return (
-    <div className='p-10 bg-warning border-2 m-2 shadow-lg'>
-      
-      <p className='text-4xl font-bold'>
-        {coin.id}: {coin.name}
-      </p>
-      
-      <p dangerouslySetInnerHTML={{ __html: coin.description.en }} 
+    <>
+      <div className='min-h-min'>
+
+        <Description name={coin.name} description={coin.description.en}/>
+        {/* <div className='p-10 bg-warning border-2 m-2 shadow-lg'> 
+          <p className='text-4xl font-bold'>
+          {coin.name}
+          </p>
+          <p dangerouslySetInnerHTML={{ __html: coin.description.en }} 
           className="border-t border-black"
           id="coinDesc"
-      >
-        
-      </p>
-    </div>
+          >
+          </p>
+        </div> */}
+          <div className='p-10 bg-info border-2 m-2 shadow-lg max-w-sm'>
+            <p className='text-2xl font-bold'>Rank</p>
+            <p className='text-6xl font-bold'>{coin.market_data.market_cap_rank}</p>
+          </div>
+          <div className='p-10 bg-error border-2 m-2 shadow-lg max-w-sm'>
+            <p className='text-2xl font-bold'>Current Price</p>
+            <p className='text-6xl font-bold'>${coin.market_data.current_price.usd}</p>
+          </div>
+          <div className='p-10 bg-success border-2 m-2 shadow-lg max-w-sm'>
+            <p className='text-2xl font-bold'>All Time High</p>
+            <p className='text-6xl font-bold'>${coin.market_data.ath.usd}</p>
+          </div>
+        </div>
+    </>
   )
 }
 

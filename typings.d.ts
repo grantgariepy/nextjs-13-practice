@@ -52,6 +52,13 @@ export type Coin = {
   };
   market_cap_rank: number;
   genesis_date: string;
-  
-
+  market_data: {
+    current_price: {
+      usd: number;
+    };
+    ath: {
+      usd: number;
+    };
+    market_cap_rank: string;
+  }
 }
