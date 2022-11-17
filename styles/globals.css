@@ -13,3 +13,6 @@
 /* #homePageBtn:hover{
   background-color: #0072F5;
 } */
+#homePage{
+  overflow-y: hidden !important;
+}

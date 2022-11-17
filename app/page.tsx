@@ -1,19 +1,28 @@
 import React, { Suspense } from 'react'
+import Crypto from './Crypto'
+import Hero from './Hero'
+import Header from './Header';
 
 function Home() {
   return (
-    <div>
-      {/* <video autoPlay muted loop preload="auto">
-        <source  src="/bitcoin.mp4" type="video/mp4" />
-      </video> */}
-      <div className="hero min-h-screen">
-        <div className="hero-overlay bg-base-200"></div>
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-            <p className="mb-5">Your one stop shop for all your Cyrptocurrency information. Click the button below to begin your journey.</p>
-            <label htmlFor="my-drawer" className="btn btn-info drawer-button" id="homePageBtn">Search for Coin</label> 
-          </div>
+    <div className='min-h-min' id='homePage'>
+      
+      <div className="drawer ">
+        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content ">
+          {/* <!-- Page content here --> */}
+          <Hero />
+        </div> 
+        <div className="drawer-side">
+            {/* <!-- Sidebar content here --> */}
+          <label htmlFor="my-drawer" className="drawer-overlay overflow-y-hidden"></label>
+          <ul className="menu bg-base-100 w-56 p-2">
+              {/* @ts-ignore */}
+              <Crypto/>
+            {/* @ts-ignore */}
+            {/* <Search /> */}
+            
+          </ul>
         </div>
       </div>
       
