@@ -14,9 +14,11 @@ function Header() {
           </p>
         </div>
         <div className='flex-none'>
-          <p className="btn btn-ghost normal-case text-xl">
-            <Link href="/about">About</Link>  
-          </p>
+          <Link href="/about">
+            <p className="btn btn-ghost normal-case text-xl">
+              About  
+            </p>
+          </Link>
         </div>
       </div>
       

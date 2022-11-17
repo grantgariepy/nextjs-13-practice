@@ -19,14 +19,10 @@ async function Crypto() {
   return (
     <>
       {coins.map((coin) => (
-        
-        
-
-          <Coin id={coin.id} name={coin.name} />
-        
-//         <li key={coin.id} >
-//           <Link href={`/${coin.id}`}>{coin.name}</Link>
-//         </li>
+        <Coin id={coin.id} name={coin.name} />
+        // <li key={coin.id}>
+        //   <Link className='drawer-button' href={`/${coin.id}`}>{coin.name}</Link>
+        // </li>
       ))}
     </>
         
