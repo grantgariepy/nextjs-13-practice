@@ -2,7 +2,7 @@ import React from 'react'
 
 function Hero() {
   return (
-    <div>
+    <div className='top-0'>
       <div className="hero min-h-screen">
         <div className="hero-overlay bg-base-200"></div>
         <div className="hero-content text-center">
