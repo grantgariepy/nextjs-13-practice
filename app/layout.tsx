@@ -13,7 +13,7 @@ export default function RootLayout({
     <html lang="en" className='scroll-smooth '>
       <head />
         
-      <body className=''>
+      <body className='bg-base-200'>
           <div className='' >
             <div className="drawer ">
               <input id="my-drawer" type="checkbox" className="drawer-toggle" />
