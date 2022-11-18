@@ -2,7 +2,7 @@ import React from 'react'
 import { Coin } from '../../typings'
 
 
-function Description({name, description, } :{name: string, description: any,}) {
+function Info({name, description, } :{name: string, description: any,}) {
   return (
     <div className='p-10 bg-warning border-2 m-2 shadow-lg'> 
         <p className='text-4xl font-bold'>
@@ -17,4 +17,4 @@ function Description({name, description, } :{name: string, description: any,}) {
   )
 }
 
-export default Description
+export default Info

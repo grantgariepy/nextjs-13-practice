@@ -1,7 +1,7 @@
 import React from 'react'
 import { Coin } from '../../typings'
 import { notFound } from "next/navigation" 
-import Description from './Description';
+import Info from './Info';
 import Crypto from '../Crypto';
 import { Chart } from './Chart';
 
@@ -26,7 +26,7 @@ async function CoinPage({params: { id} }:PageProps) {
   if (!id) return notFound();
   return (
     <>
-      <Description name={coin.name} description={coin.description.en}/>
+      <Info name={coin.name} description={coin.description.en}/>
       <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-sm'>
         <p className='text-2xl font-bold'>Current Price</p>
         <p className='text-6xl font-bold'>${coin.market_data.current_price.usd}</p>

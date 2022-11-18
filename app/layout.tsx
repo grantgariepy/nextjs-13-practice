@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import Crypto from './Crypto'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 export default function RootLayout({
   children,
@@ -9,20 +10,19 @@ export default function RootLayout({
 }) 
 {
   return (
-    <html lang="en">
+    <html lang="en" className='scroll-smooth '>
       <head />
         
       <body className=''>
-              <div className=''>
-          <div className='' id='homePage'>
+          <div className='' >
             <div className="drawer ">
-
               <input id="my-drawer" type="checkbox" className="drawer-toggle" />
               <div className="drawer-content ">
               <Navbar />
                 <div className=''>
                   {children}
                 </div>
+              <Footer />
               </div>
               <div className="drawer-side">
                 {/* <!-- Sidebar content here --> */}
@@ -36,7 +36,6 @@ export default function RootLayout({
               </div> 
             </div>
           </div> 
-              </div>
       </body>
     </html>
   )

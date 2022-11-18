@@ -6,9 +6,9 @@ import Navbar from './Navbar';
 function Home() {
   return (
     <>
-      <div className='top-0'>
+        <div className='' id='hero'>
         <div className="hero min-h-screen">
-          <div className="hero-overlay bg-base-200"></div>
+          <div className="hero-overlay bg-base-200 max-h-screen"></div>
           <div className="hero-content text-center">
             <div className="max-w-md">
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
