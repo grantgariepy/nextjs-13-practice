@@ -1,6 +1,6 @@
-import '../styles/globals.css'
-import Crypto from './Crypto'
-import Navbar from './Navbar'
+
+import Crypto from '../Crypto'
+import Navbar from '../Navbar'
 
 export default function RootLayout({
   children,
@@ -9,18 +9,16 @@ export default function RootLayout({
 }) 
 {
   return (
-    <html lang="en">
-      <head />
-        
-      <body className=''>
-              <div className=''>
-          <div className='' id='homePage'>
+    
+    <body className=''>
+              <div className='max-h-screen'>
+          <div className='min-h-min' id='homePage'>
             <div className="drawer ">
 
               <input id="my-drawer" type="checkbox" className="drawer-toggle" />
               <div className="drawer-content ">
               <Navbar />
-                <div className=''>
+                <div>
                   {children}
                 </div>
               </div>
@@ -38,6 +36,6 @@ export default function RootLayout({
           </div> 
               </div>
       </body>
-    </html>
+    
   )
 }

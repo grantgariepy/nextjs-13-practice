@@ -26,39 +26,21 @@ async function CoinPage({params: { id} }:PageProps) {
   if (!id) return notFound();
   return (
     <>
-    <div className="drawer">
-      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content ">
-        <div className='overflow-auto'>
-          <Description name={coin.name} description={coin.description.en}/>
-          <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-sm'>
-            <p className='text-2xl font-bold'>Current Price</p>
-            <p className='text-6xl font-bold'>${coin.market_data.current_price.usd}</p>
-          </div>
-          <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-sm'>
-            <p className='text-2xl font-bold'>All Time High</p>
-            <p className='text-6xl font-bold'>${coin.market_data.ath.usd}</p>
-          </div>
-          <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-xs'>
-            <p className='text-2xl font-bold'>Rank</p>
-            <p className='text-6xl font-bold'>{coin.market_data.market_cap_rank}</p>
-          </div>
-          <div className='min-h-full'>
-            <Chart />
-          </div>
-        </div>
-      </div> 
-        <div className="drawer-side">
-            {/* <!-- Sidebar content here --> */}
-          <label htmlFor="my-drawer" className="drawer-overlay overflow-y-hidden"></label>
-          <ul className="menu bg-base-100 w-56 p-2">
-               {/* @ts-ignore */}
-              <Crypto/>
-            {/* @ts-ignore */}
-            {/* <Search /> */}
-            
-          </ul>
-        </div>
+      <Description name={coin.name} description={coin.description.en}/>
+      <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-sm'>
+        <p className='text-2xl font-bold'>Current Price</p>
+        <p className='text-6xl font-bold'>${coin.market_data.current_price.usd}</p>
+      </div>
+      <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-sm'>
+        <p className='text-2xl font-bold'>All Time High</p>
+        <p className='text-6xl font-bold'>${coin.market_data.ath.usd}</p>
+      </div>
+      <div className='p-10 bg-warning border-2 m-2 shadow-lg max-w-xs'>
+        <p className='text-2xl font-bold'>Rank</p>
+        <p className='text-6xl font-bold'>{coin.market_data.market_cap_rank}</p>
+      </div>
+      <div className='min-h-full'>
+        <Chart />
       </div>
     </>
   )
