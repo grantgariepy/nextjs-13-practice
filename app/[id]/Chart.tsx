@@ -46,8 +46,8 @@ export const data = {
       label: 'Dataset 1',
       // @ts-ignore
       data: [123, 123, 123, 123, 124, 123, 122],
-      borderColor: '#FF6052',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      borderColor: '#3f51b5',
+      backgroundColor: '#7986cb'
     },
   ],
 };
