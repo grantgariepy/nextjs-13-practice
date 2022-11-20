@@ -268,104 +268,47 @@ function Home() {
                     </a> */}
                   </div>
                 </div>
-                {/* <!-- feature - end -->
-
-      <!-- feature - start --> */}
-                {/* <div className='flex gap-4 md:gap-6'>
-                  <div className='w-12 md:w-14 h-12 md:h-14 flex justify-center items-center shrink-0 bg-indigo-500 text-white rounded-lg md:rounded-xl shadow-lg'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='w-6 h-6'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      stroke='currentColor'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2'
-                        d='M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z'
-                      />
-                    </svg>
-                  </div>
-
-                  <div>
-                    <h3 className='text-lg md:text-xl font-semibold mb-2'>
-                      Support
-                    </h3>
-                    <p className='text-gray-500 mb-2'>
-                      Filler text is
-                      dummy text which
-                      has no meaning
-                      however looks very
-                      similar to real
-                      text.
-                    </p>
-                    <a
-                      href='#'
-                      className='text-indigo-500 hover:text-indigo-600 active:text-indigo-700 font-bold transition duration-100'
-                    >
-                      More
-                    </a>
-                  </div>
-                </div> */}
-                {/* <!-- feature - end -->
-
-      <!-- feature - start --> */}
-                {/* <div className='flex gap-4 md:gap-6'>
-                  <div className='w-12 md:w-14 h-12 md:h-14 flex justify-center items-center shrink-0 bg-indigo-500 text-white rounded-lg md:rounded-xl shadow-lg'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='w-6 h-6'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      stroke='currentColor'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2'
-                        d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
-                      />
-                    </svg>
-                  </div>
-
-                  <div>
-                    <h3 className='text-lg md:text-xl font-semibold mb-2'>
-                      Dark Mode
-                    </h3>
-                    <p className='text-gray-500 mb-2'>
-                      Filler text is
-                      dummy text which
-                      has no meaning
-                      however looks very
-                      similar to real
-                      text.
-                    </p>
-                    <a
-                      href='#'
-                      className='text-indigo-500 hover:text-indigo-600 active:text-indigo-700 font-bold transition duration-100'
-                    >
-                      More
-                    </a>
-                  </div>
-                </div> */}
-                {/* <!-- feature - end --> */}
+                {/* <!-- feature - end -->*/}
               </div>
+              <section className='flex flex-col lg:flex-row justify-between gap-6 pt-10 sm:gap-10 md:gap-16'>
+                {/* <!-- content - start --> */}
+                <div className='xl:w-5/12 flex flex-col justify-center sm:text-center lg:text-left lg:py-12 xl:py-24'>
+                  <p className='text-indigo-500 md:text-lg xl:text-xl font-semibold mb-4 md:mb-6'>
+                    Simple and Clean
+                  </p>
+
+                  <h1 className='text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12'>
+                    Visualize Data with Chart.js
+                  </h1>
+
+                  <p className='lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12'>
+                    Data is fetched from the CoinGeck API and displayed using the Chart.js library.
+                  </p>
+
+                  <div className='flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5'>
+                    <label
+                      htmlFor='my-drawer'
+                      className=' cursor-pointer inline-block drawer-button bg-indigo-500 hover:bg-indigo-700 focus-visible:ring ring-indigo-300 text-gray-200 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3'
+                    >
+                      Search for Coins
+                    </label>
+                  </div>
+                </div>
+                {/* <!-- content - end -->
+
+                      <!-- image - start --> */}
+                <div className='xl:w-5/12 h-48 lg:h-auto bg-gray-100 overflow-hidden shadow-lg rounded-lg'>
+                  <img
+                    src='https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000'
+                    loading='lazy'
+                    alt='Photo by Fakurian Design'
+                    className='w-full h-full object-cover object-center'
+                  />
+                </div>
+                {/* <!-- image - end --> */}
+              </section>
             </div>
           </div>
-          {/* <div className='' id='hero'>
-        <div className="hero min-h-screen">
-          <div className="hero-overlay bg-base-200 max-h-screen"></div>
-          <div className="hero-content text-center">
-            <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-              <p className="mb-5">Your one stop shop for all your Cyrptocurrency information. Click the button below to begin your journey.</p>
-              <label htmlFor="my-drawer" className="btn btn-info drawer-button" id="homePageBtn">Search for Coin</label> 
-            </div>
-          </div>
-        </div>
-      </div> */}
         </div>
       </div>
     </>
