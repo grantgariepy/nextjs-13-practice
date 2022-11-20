@@ -61,8 +61,8 @@ function About() {
 
                       <p className='pb-6 max-w-screen-md text-gray-500 md:text-lg text-center mx-auto'>
                         This site is built on the Next.js 13 Framework and deployed on Vercel. It is
-                        written in TypeScript and designed with Tailwin CSS. The data is being
-                        fetched from the CoinGeck API and visualized with the Chart.js library.
+                        written in TypeScript and designed with Tailwind CSS. The data is being
+                        fetched from the CoinGecko API and visualized with the Chart.js library.
                       </p>
                       <h2 className='text-gray-600 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6'>
                         About Me
