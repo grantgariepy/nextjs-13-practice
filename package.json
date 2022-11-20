@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.13",
     "chart.js": "^4.0.1",
     "daisyui": "^2.40.1",
     "next": "latest",

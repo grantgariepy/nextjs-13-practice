@@ -13,7 +13,7 @@ export default function RootLayout({
       lang='en'
       className='scroll-smooth '
     >
-      <body className='bg-base-200'>
+      <body className=''>
         <div className=''>
           <div className='drawer '>
             <input
