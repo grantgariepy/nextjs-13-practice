@@ -1,7 +1,8 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import React from 'react;
 
-export default function Home() {
-  return
+function Home() {
+  return (
   <>
     <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
       <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
@@ -46,3 +47,4 @@ export default function Home() {
     </div>
   </>
 }
+export default Home;
