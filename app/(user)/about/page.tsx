@@ -5,7 +5,7 @@ import Crypto from '../../Crypto';
 function About() {
   return (
     <div>
-      <div className='drawer '>
+      <div className='drawer drawer-mobile'>
         <input
           id='my-drawer'
           type='checkbox'
