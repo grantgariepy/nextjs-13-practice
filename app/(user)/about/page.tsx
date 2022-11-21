@@ -12,8 +12,8 @@ function About() {
           className='drawer-toggle'
         />
         <div className='drawer-content '>
-<!--           <div className='hero min-h-screen '>
-            <div className='hero-content text-center'> -->
+          {/* <div className='hero min-h-screen '>
+            <div className='hero-content text-center'> */}
               <div className='max-w-md'>
                 {/* <h1 className='text-5xl font-bold pb-8'>
                   Hi
@@ -145,8 +145,8 @@ function About() {
                   </div>
                 </div>
               </div>
-<!--             </div>
-          </div> -->
+          {/*</div>
+          </div>*/}
         </div>
         <div className='drawer-side'>
           {/* <!-- Sidebar content here --> */}
