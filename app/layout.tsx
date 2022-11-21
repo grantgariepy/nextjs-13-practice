@@ -13,6 +13,7 @@ export default function RootLayout({
       lang='en'
       className='scroll-smooth '
     >
+      <Navbar />
       <body className=''>
         <div className=''>
           <div className='drawer '>
@@ -22,7 +23,7 @@ export default function RootLayout({
               className='drawer-toggle'
             />
             <div className='drawer-content '>
-              <Navbar />
+              
               <div className=''>
                 {children}
               </div>
