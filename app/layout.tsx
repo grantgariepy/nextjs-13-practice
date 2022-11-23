@@ -1,23 +1,36 @@
 import '../styles/globals.css';
-import Crypto from './Crypto';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Crypto from './components/Crypto';
+import Navbar from './components/Navbar';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-us">
-      <head/>
+    <html lang='en-us'>
+      <head />
       <body>
-        <Navbar />
-        <section>
-          <div>
-            {children}
+        <div className='drawer'>
+          <input
+            id='my-drawer'
+            type='checkbox'
+            className='drawer-toggle'
+          />
+          <div className='drawer-content'>
+            <Navbar />
+
+            <section>
+              <div>{children}</div>
+            </section>
           </div>
-        </section>
+          <div className='drawer-side'>
+            <label
+              htmlFor='my-drawer'
+              className='drawer-overlay'
+            ></label>
+            <ul className='menu p-4 w-fit bg-base-100 text-base-content'>
+              {/* @ts-ignore */}
+              <Crypto />
+            </ul>
+          </div>
+        </div>
       </body>
     </html>
   );

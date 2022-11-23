@@ -5,10 +5,10 @@ function Navbar() {
   return (
     <>
       <div className='navbar  text-indigo-500 font-bold'>
-        <div className='flex-1'>
+        <div className='flex-1 '>
           <label
             htmlFor='my-drawer'
-            className='pl-4 drawer-button'
+            className='pl-4 drawer-button cursor-pointer'
             id='hamburger'
           >
             <svg
@@ -18,9 +18,9 @@ function Navbar() {
               className='inline-block w-5 h-5 stroke-current'
             >
               <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
+                strokeLinecap='square'
+                strokeLinejoin='inherit'
+                strokeWidth='4'
                 d='M4 6h16M4 12h16M4 18h16'
               ></path>
             </svg>
@@ -31,9 +31,7 @@ function Navbar() {
         </div>
         <div className='flex-none'>
           <Link href='/about'>
-            <p className='pr-4 font-bold text-xl'>
-              About
-            </p>
+            <p className='pr-4 font-bold text-xl'>About</p>
           </Link>
         </div>
       </div>

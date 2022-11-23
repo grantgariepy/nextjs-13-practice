@@ -2,7 +2,7 @@ import React from 'react';
 import { Coin } from '../../typings';
 import { notFound } from 'next/navigation';
 import Info from './Info';
-import Crypto from '../Crypto';
+import Crypto from '../components/Crypto';
 import { Chart } from './Chart';
 import Link from 'next/link';
 
@@ -121,41 +121,13 @@ async function CoinPage({ params: { id } }: PageProps) {
               {coin.market_data.price_change_percentage_24h > 0 ? (
                 <div className='text-green-400 text-xl sm:text-2xl md:text-3xl font-bold'>
                   <div className='flex flex-row'>
-                    %{coin.market_data.price_change_percentage_24h.toFixed(2)}
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      strokeWidth={2.5}
-                      stroke='currentColor'
-                      className='w-6 h-6 mt-1 ml-2 sm:mt-2'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18'
-                      />
-                    </svg>
+                    %{coin.market_data.price_change_percentage_24h.toFixed(2)}↑
                   </div>
                 </div>
               ) : (
                 <div className='text-red-400 text-xl sm:text-2xl md:text-3xl font-bold'>
                   <div className='flex flex-row'>
-                    %{coin.market_data.price_change_percentage_24h.toFixed(2)}
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      strokeWidth={2.5}
-                      stroke='currentColor'
-                      className='w-6 h-6 mt-1 ml-2 sm:mt-2'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75'
-                      />
-                    </svg>
+                    %{coin.market_data.price_change_percentage_24h.toFixed(2)}↑
                   </div>
                 </div>
               )}
