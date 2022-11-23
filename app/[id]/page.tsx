@@ -5,6 +5,7 @@ import Info from './Info';
 import Crypto from '../components/Crypto';
 import { Chart } from './Chart';
 import Link from 'next/link';
+import Footer from '../components/Footer';
 
 export const dynamicParams = true;
 
@@ -186,6 +187,7 @@ async function CoinPage({ params: { id } }: PageProps) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

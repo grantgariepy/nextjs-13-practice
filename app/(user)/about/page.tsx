@@ -31,7 +31,7 @@ function About() {
           </div>
           {/* <!-- text - end --> */}
 
-          <div className='grid grid-cols-3 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-3 md:grid-cols-3 gap-2'>
             {/* <!-- stat - start --> */}
             <div className='flex flex-col items-center md:p-4'>
               <div className='text-indigo-500 text-xl sm:text-2xl md:text-3xl font-bold hover:text-indigo-300'>
@@ -54,8 +54,8 @@ function About() {
             </div>
             {/* <!-- stat - end --> */}
             {/* <!-- stat - start --> */}
-            <div className='flex flex-col items-center md:p-4'>
-              <div className='text-indigo-500 text-xl sm:text-2xl md:text-3xl font-bold hover:text-indigo-300'>
+            <div className='flex flex-col items-center md:p-4 '>
+              <div className='text-indigo-500 text-xl sm:text-2xl md:text-3xl font-bold hover:text-indigo-300 '>
                 <Link
                   href='https://grantgariepy.com'
                   target='__blank'
@@ -65,7 +65,7 @@ function About() {
                     width='48'
                     height='48'
                     viewBox='0 0 24 24'
-                    className='fill-indigo-500 m-auto'
+                    className='fill-indigo-500 m-auto '
                   >
                     <path d='M17.133 16.202l1.596.923c-1.508 2.055-3.606 3.548-5.729 3.875v-12.102c0-2.39 2-2.619 2-4.898 0-1.654-1.346-3-3-3s-3 1.346-3 3c0 2.297 2 2.487 2 4.898v12.102c-2.123-.327-4.221-1.799-5.729-3.854l1.596-.944-4.867-2.811v5.621l1.5-.908c2.178 3.077 5.203 4.896 8.5 4.896s6.282-1.798 8.458-4.875l1.542.887v-5.621l-4.867 2.811zm-6.134-12.202c0-.551.449-1 1.001-1s1 .449 1 1-.449 1-1 1-1.001-.449-1.001-1z' />
                   </svg>

@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 import Features from './components/Features';
+import Footer from './components/Footer';
 import Hero from './components/Hero';
+import LogoCloud from './components/LogoCloud';
 
 function Home() {
   return (
@@ -10,6 +12,8 @@ function Home() {
         <div className='max-w-screen-2xl px-4 md:px-8 mx-auto'>
           <Hero />
           <Features />
+          <LogoCloud />
+          <Footer />
         </div>
       </div>
     </>

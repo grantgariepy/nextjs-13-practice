@@ -1,6 +1,5 @@
 import React from 'react';
 import { Coins } from '../../typings';
-import Link from 'next/link';
 import Coin from './Coin';
 
 export const fetchCoins = async () => {
@@ -9,21 +8,18 @@ export const fetchCoins = async () => {
   );
   const coins: Coins[] = await res.json();
   return coins;
-  console.log(coins);
 };
 async function Crypto() {
   const coins = await fetchCoins();
-  // console.log(coins)
+
   return (
     <>
       {coins.map((coin) => (
         <Coin
           id={coin.id}
           name={coin.name}
+          key={coin.id}
         />
-        // <li key={coin.id}>
-        //   <Link className='drawer-button' href={`/${coin.id}`}>{coin.name}</Link>
-        // </li>
       ))}
     </>
   );
