@@ -6,7 +6,7 @@ function Hero() {
     <section className='min-h-96 flex justify-center items-center flex-1 shrink-0 bg-gray-100 overflow-hidden shadow-lg rounded-lg relative py-16 md:py-20 xl:py-48'>
       {/* image - start */}
       <img
-        src='https://images.unsplash.com/photo-1618004652321-13a63e576b80?auto=format&q=75&fit=crop&w=1500'
+        src='https://images.unsplash.com/photo-1645731504684-0f6f9b73f8bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80'
         loading='lazy'
         alt='Photo by Fakurian Design'
         className='w-full h-full object-cover object-center absolute inset-0'

@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Crypto from './components/Crypto';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </ul>
           </div>
         </div>
+        <Footer />
       </body>
     </html>
   );

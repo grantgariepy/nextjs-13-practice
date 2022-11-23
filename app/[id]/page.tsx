@@ -127,7 +127,7 @@ async function CoinPage({ params: { id } }: PageProps) {
               ) : (
                 <div className='text-red-400 text-xl sm:text-2xl md:text-3xl font-bold'>
                   <div className='flex flex-row'>
-                    %{coin.market_data.price_change_percentage_24h.toFixed(2)}↑
+                    %{coin.market_data.price_change_percentage_24h.toFixed(2)}↓
                   </div>
                 </div>
               )}
