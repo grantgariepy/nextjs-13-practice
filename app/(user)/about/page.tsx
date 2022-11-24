@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-// import me from '../../assets/me2.jpg';
+import me from '../../assets/me2.jpg';
 
 function About() {
   return (
@@ -12,8 +12,7 @@ function About() {
             <div>
               <div className='h-64 md:h-auto bg-gray-100 overflow-hidden rounded-lg shadow-lg'>
                 <Image
-                  src='../../assets/me2.jpg'
-                  loading='lazy'
+                  src={me}
                   alt='me :)'
                   className='w-full h-full object-cover object-center'
                   width='3000'
