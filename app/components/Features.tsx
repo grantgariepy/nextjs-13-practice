@@ -1,6 +1,4 @@
-import React from 'react';
-
-function Features() {
+export default function Features() {
   return (
     <div>
       {/* text - start */}
@@ -221,5 +219,3 @@ function Features() {
     </div>
   );
 }
-
-export default Features;

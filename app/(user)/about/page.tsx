@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import me from '../../../public/assets/me2.jpg';
 
-function About() {
+export default function About() {
   return (
     <>
       <div className='bg-white py-6 sm:py-8 lg:py-12'>
@@ -112,5 +112,3 @@ function About() {
     </>
   );
 }
-
-export default About;

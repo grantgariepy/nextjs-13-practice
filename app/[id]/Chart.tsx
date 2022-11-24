@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -42,7 +41,6 @@ export function Chart(chartData: any) {
   });
 
   const labels = dateArray;
-  // console.log(labels)
   const data = {
     labels,
     datasets: [

@@ -25,13 +25,13 @@ const fetchCoin = async (id: string) => {
 const fetchChartData = async (id: string) => {
   const res = await fetch(
     `https://api.coingecko.com/api/v3/coins/${id}/ohlc?vs_currency=usd&days=90`,
-    {next: {revalidate: 60} }
+    { next: { revalidate: 60 } }
   );
   const chartData = await res.json();
   return chartData;
-}
+};
 
-async function CoinPage({ params: { id } }: PageProps) {
+export default async function CoinPage({ params: { id } }: PageProps) {
   const coin: Coin = await fetchCoin(id);
   const chartData = await fetchChartData(id);
   if (!id) return notFound();
@@ -45,12 +45,11 @@ async function CoinPage({ params: { id } }: PageProps) {
               {coin.name} - #{coin.id}
             </h2>
             <p
-              dangerouslySetInnerHTML={{ __html: coin.description.en.slice(0, 501) + "..."  }}
+              dangerouslySetInnerHTML={{ __html: coin.description.en.slice(0, 501) + '...' }}
               className='max-w-screen-md text-gray-500 md:text-lg text-center mx-auto'
               id='coinDesc'
             ></p>
             <p className='max-w-screen-md text-gray-500 md:text-lg text-center mx-auto'>
-              
               <Link
                 href={coin.links.homepage[0]}
                 target='__blank'
@@ -109,7 +108,10 @@ async function CoinPage({ params: { id } }: PageProps) {
             {/* <!-- stat - end --> */}
           </div>
           <div className='min-h-max pt-10 pb-10'>
-            <Chart data={chartData} name={coin.name}/>
+            <Chart
+              data={chartData}
+              name={coin.name}
+            />
           </div>
         </div>
         <div className='max-w-screen-xl px-4 md:px-8 mx-auto'>
@@ -159,16 +161,3 @@ async function CoinPage({ params: { id } }: PageProps) {
     </>
   );
 }
-
-export default CoinPage;
-
-// export async function generateStaticParams() {
-//   const res = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false");
-//   const coins: Coin[] = await res.json();
-
-//   const trimmedCoins = coins.splice(0, 10)
-
-//   return trimmedCoins.map(coin => ({
-//     id: coin.id.toString(),
-//   }))
-// }

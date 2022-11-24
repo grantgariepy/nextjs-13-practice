@@ -1,7 +1,4 @@
-import Link from 'next/link';
-import React from 'react';
-
-function Hero() {
+export default function Hero() {
   return (
     <section className='min-h-96 flex justify-center items-center flex-1 shrink-0 bg-gray-100 overflow-hidden shadow-lg rounded-lg relative py-16 md:py-20 xl:py-48'>
       {/* image - start */}
@@ -37,5 +34,3 @@ function Hero() {
     </section>
   );
 }
-
-export default Hero;

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Coin = ({ name, id }: { name: string; id: string }) => {
   return (
     <>

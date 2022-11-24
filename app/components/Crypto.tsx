@@ -1,4 +1,3 @@
-import React from 'react';
 import { Coins } from '../../typings';
 import Coin from './Coin';
 
@@ -9,7 +8,7 @@ export const fetchCoins = async () => {
   const coins: Coins[] = await res.json();
   return coins;
 };
-async function Crypto() {
+export default async function Crypto() {
   const coins = await fetchCoins();
 
   return (
@@ -24,5 +23,3 @@ async function Crypto() {
     </>
   );
 }
-
-export default Crypto;

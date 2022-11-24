@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import React from 'react';
 
-function Navbar() {
+export default function Navbar() {
   return (
     <>
       <div className='navbar  text-indigo-500 font-bold'>
@@ -38,5 +37,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;
