@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import me from '../../assets/me2.jpg';
+import me from '../../../public/assets/me2.jpg';
 
 function About() {
   return (

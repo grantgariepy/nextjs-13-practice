@@ -4,7 +4,4 @@ module.exports = {
   experimental:{
     appDir: true,
   },
-  images: {
-    formats: ['image/png','image/jpg'],
-  },
 }
