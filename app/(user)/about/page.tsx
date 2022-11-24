@@ -36,10 +36,11 @@ export default function About() {
                 About me
               </h2>
               <p className='text-gray-500 sm:text-lg mb-6 md:mb-8'>
-                My name is Grant Gariepy and I've been building full stack apps for almost 2 years
-                and love to learn and experiment with anything coding related. Check out my Github,
-                LinkedIn, and Portfolio at the links below for more of my work or if you want to get
-                in contact. ⚓
+                My name is Grant Gariepy and I've been building full stack apps for almost 2 years,
+                and love to learn and experiment with anything coding related. I am currently
+                employed as a Web Developer Intern at Weber County in Ogden, Utah. Check out my
+                Github, LinkedIn, and Portfolio at the links below for more of my work or if you
+                want to get in contact. ⚓
               </p>
               <div className='grid grid-cols-3 md:grid-cols-3 gap-2'>
                 {/* <!-- stat - start --> */}

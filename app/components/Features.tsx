@@ -7,7 +7,7 @@ export default function Features() {
           The Stack Used
         </h2>
         <p className='max-w-screen-md text-gray-500 md:text-lg text-center mx-auto'>
-          These are the tools I've used to creat this app
+          These are the tools I've used to create this app
         </p>
       </div>
       {/* text - end */}
