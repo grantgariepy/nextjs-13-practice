@@ -5,6 +5,6 @@ module.exports = {
     appDir: true,
   },
   images: {
-    formats: ['image/jpg'],
-  }
+    formats: ['image/png','image/jpg'],
+  },
 }
