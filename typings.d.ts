@@ -61,12 +61,13 @@ export type Coin = {
     };
     market_cap_rank: string;
     price_change_percentage_24h: number;
+    total_supply: number;
+    max_supply: number;
+    circulating_supply: number;
 
   }
   links: {
     homepage: string;
   }
-  sparkline: {
-    price: Array;
-  };
+ 
 }

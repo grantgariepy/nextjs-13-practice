@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import {
@@ -12,17 +12,8 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import faker from '@faker-js/faker';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 export const options = {
   responsive: true,
@@ -31,27 +22,42 @@ export const options = {
       position: 'top' as const,
     },
     title: {
-      display: true,
-      text: 'Chart.js Line Chart',
+      display: false,
     },
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+export function Chart(chartData: any) {
+  let dateArray: any = [];
+  let priceArray: any = [];
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      // @ts-ignore
-      data: [123, 123, 123, 123, 124, 123, 122],
-      borderColor: '#3f51b5',
-      backgroundColor: '#7986cb'
-    },
-  ],
-};
+  const array = chartData.data;
 
-export function Chart() {
-  return <Line options={options} data={data} />;
+  array.forEach((date: any) => {
+    dateArray.push(new Date(date[0]).toLocaleDateString('en-US'));
+  });
+
+  array.forEach((price: any) => {
+    priceArray.push(price[2]);
+  });
+
+  const labels = dateArray;
+  // console.log(labels)
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: '90 Days',
+        data: priceArray,
+        borderColor: '#3f51b5',
+        backgroundColor: '#7986cb',
+      },
+    ],
+  };
+  return (
+    <Line
+      options={options}
+      data={data}
+    />
+  );
 }

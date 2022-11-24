@@ -1,8 +1,6 @@
 import React from 'react';
 import { Coin } from '../../typings';
 import { notFound } from 'next/navigation';
-import Info from './Info';
-import Crypto from '../components/Crypto';
 import { Chart } from './Chart';
 import Link from 'next/link';
 import Footer from '../components/Footer';
@@ -24,50 +22,21 @@ const fetchCoin = async (id: string) => {
   return coin;
 };
 
+const fetchChartData = async (id: string) => {
+  const res = await fetch(
+    `https://api.coingecko.com/api/v3/coins/${id}/ohlc?vs_currency=usd&days=90`,
+    {next: {revalidate: 60} }
+  );
+  const chartData = await res.json();
+  return chartData;
+}
+
 async function CoinPage({ params: { id } }: PageProps) {
   const coin: Coin = await fetchCoin(id);
-  // console.log(coin.sparkline.price[0]);
-  // console.log(coin.links.homepage[0]);
+  const chartData = await fetchChartData(id);
   if (!id) return notFound();
   return (
     <>
-      {/* <Info
-        name={coin.name}
-        description={
-          coin.description.en
-        }
-      /> */}
-      {/* <div className='p-10 bg-indigo-500 text-gray-300 m-2 shadow-lg max-w-sm'>
-        <p className='text-2xl font-bold'>
-          Current Price
-        </p>
-        <p className='text-6xl font-bold'>
-          $
-          {
-            coin.market_data
-              .current_price.usd
-          }
-        </p>
-      </div>
-      <div className='p-10 bg-indigo-500 text-gray-300 m-2 shadow-lg max-w-sm'>
-        <p className='text-2xl font-bold'>
-          All Time High
-        </p>
-        <p className='text-6xl font-bold'>
-          ${coin.market_data.ath.usd}
-        </p>
-      </div>
-      <div className='p-10 bg-indigo-500 text-gray-300  m-2 shadow-lg max-w-xs'>
-        <p className='text-2xl font-bold'>
-          Rank
-        </p>
-        <p className='text-6xl font-bold'>
-          {
-            coin.market_data
-              .market_cap_rank
-          }
-        </p>
-      </div> */}
       <div className='bg-white py-6 sm:py-8 lg:py-12'>
         <div className='max-w-screen-lg px-4 md:px-8 mx-auto'>
           {/* <!-- text - start --> */}
@@ -75,10 +44,13 @@ async function CoinPage({ params: { id } }: PageProps) {
             <h2 className='text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6'>
               {coin.name} - #{coin.id}
             </h2>
-
+            <p
+              dangerouslySetInnerHTML={{ __html: coin.description.en.slice(0, 501) + "..."  }}
+              className='max-w-screen-md text-gray-500 md:text-lg text-center mx-auto'
+              id='coinDesc'
+            ></p>
             <p className='max-w-screen-md text-gray-500 md:text-lg text-center mx-auto'>
-              {coin.description.en.slice(0, 501)}
-              ...
+              
               <Link
                 href={coin.links.homepage[0]}
                 target='__blank'
@@ -137,51 +109,47 @@ async function CoinPage({ params: { id } }: PageProps) {
             {/* <!-- stat - end --> */}
           </div>
           <div className='min-h-max pt-10 pb-10'>
-            <Chart />
+            <Chart data={chartData} name={coin.name}/>
           </div>
         </div>
         <div className='max-w-screen-xl px-4 md:px-8 mx-auto'>
           {/* <!-- text - start --> */}
           <div className='mb-8 md:mb-12'>
             <h2 className='text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6'>
-              Our Team by the numbers
+              Supply Stats!
             </h2>
 
             <p className='max-w-screen-md text-gray-500 md:text-lg text-center mx-auto'>
-              This is a section of some simple filler text, also known as placeholder text. It
-              shares some characteristics of a real written text but is random or otherwise
-              generated.
+              Here we have the total supply of the coin, the max supply, and the current circulating
+              supply.
             </p>
           </div>
           {/* <!-- text - end --> */}
 
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8'>
+          <div className='grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8'>
             {/* <!-- stat - start --> */}
             <div className='flex flex-col justify-center items-center bg-gray-100 rounded-lg p-4 lg:p-8'>
-              <div className='text-indigo-500 text-xl sm:text-2xl md:text-3xl font-bold'>200</div>
-              <div className='text-sm sm:text-base font-semibold'>People</div>
-            </div>
-            {/* <!-- stat - end --> */}
-
-            {/* <!-- stat - start --> */}
-            <div className='flex flex-col justify-center items-center bg-gray-100 rounded-lg p-4 md:p-8'>
-              <div className='text-indigo-500 text-xl sm:text-2xl md:text-3xl font-bold'>500+</div>
-              <div className='text-sm sm:text-base font-semibold'>People</div>
-            </div>
-
-            {/* <!-- stat - start --> */}
-            <div className='flex flex-col justify-center items-center bg-gray-100 rounded-lg p-4 md:p-8'>
-              <div className='text-indigo-500 text-xl sm:text-2xl md:text-3xl font-bold'>1000+</div>
-              <div className='text-sm sm:text-base font-semibold'>Customers</div>
+              <div className='text-indigo-500 text-xl sm:text-2xl md:text-3xl font-bold'>
+                {Intl.NumberFormat().format(coin.market_data.total_supply)}
+              </div>
+              <div className='text-sm sm:text-base font-semibold'>Total Supply</div>
             </div>
             {/* <!-- stat - end --> */}
 
             {/* <!-- stat - start --> */}
             <div className='flex flex-col justify-center items-center bg-gray-100 rounded-lg p-4 md:p-8'>
               <div className='text-indigo-500 text-xl sm:text-2xl md:text-3xl font-bold'>
-                A couple
+                {Intl.NumberFormat().format(coin.market_data.max_supply)}
               </div>
-              <div className='text-sm sm:text-base font-semibold'>Coffee breaks</div>
+              <div className='text-sm sm:text-base font-semibold'>Max Supply</div>
+            </div>
+
+            {/* <!-- stat - start --> */}
+            <div className='flex flex-col justify-center items-center bg-gray-100 rounded-lg p-4 md:p-8'>
+              <div className='text-indigo-500 text-xl sm:text-2xl md:text-3xl font-bold'>
+                {Intl.NumberFormat().format(coin.market_data.circulating_supply)}
+              </div>
+              <div className='text-sm sm:text-base font-semibold'>Circulating Supply</div>
             </div>
             {/* <!-- stat - end --> */}
           </div>

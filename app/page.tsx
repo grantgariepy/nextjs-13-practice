@@ -12,7 +12,6 @@ function Home() {
         <div className='max-w-screen-2xl px-4 md:px-8 mx-auto'>
           <Hero />
           <Features />
-          {/* <LogoCloud /> */}
           <Footer />
         </div>
       </div>
