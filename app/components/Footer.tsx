@@ -9,7 +9,7 @@ function Footer() {
           {/* social - start */}
           <div className='flex gap-4'>
             <a
-              href='#'
+              href='https://www.grantgariepy.com/'
               target='_blank'
               className='text-gray-400 hover:text-indigo-500 active:text-gray-600 transition duration-100'
             >
